@@ -1,69 +1,51 @@
-import {Container, Card, Button, Row, Col} from 'react-bootstrap';
-import {Header, TodayMeal, Clock} from '../component.js'
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
+import {
+  Header,
+  TodayMeal,
+  Clock,
+  MealsPerWeek,
+  TimeTable,
+} from "../component.js";
 
-function Main(){
-    return(
-        <div>
-            {/* <Header/> */}
-            <Clock/>
-            오늘의 메뉴
-            <Container>
-            <Row>
-                <Col>
-                <Container>
-                    기숙사 식당<br/><br/>
-                    <Row>
-                    <Col>
-                    본관
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    <Col>
-                    양성재
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    <Col>양진재
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    </Row>
-                </Container>
-                </Col>
+function Main() {
+  let place = [
+    "본관",
+    "양성재",
+    "양진재",
+    "한빛식당",
+    "별빛식당",
+    "은하수식당",
+  ];
 
-                <Col>
-                <Container>
-                    학생 식당 <br/><br/>
-                    <Row>
-                    <Col>
-                    한빛
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    <Col>
-                    별빛
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    <Col>
-                    은하수
-                        <Container>
-                        <TodayMeal/>
-                        </Container>
-                    </Col>
-                    </Row>
-                </Container>
-                    
-                </Col>
-            </Row>
-            </Container>
+  return (
+    <div>
+      <Header />
+      <Clock />
+      <div className="container text-center">
+        <div class="row">
+          <div class="col">
+            <TodayMeal place={place[0]} />
+          </div>
+          <div class="col">
+            <TodayMeal place={place[1]} />
+          </div>
+          <div class="col">
+            <TodayMeal place={place[2]} />
+          </div>
+          <div class="col">
+            <TodayMeal place={place[3]} />
+          </div>
+          <div class="col">
+            <TodayMeal place={place[4]} />
+          </div>
+          <div class="col">
+            <TodayMeal place={place[5]} />
+          </div>
         </div>
-    )
+      </div>
+      <TimeTable />
+    </div>
+  );
 }
 
 export default Main;
