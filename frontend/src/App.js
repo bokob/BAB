@@ -11,8 +11,8 @@ import "./App.css";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { Header, TodayMeal, Clock, Today, MealsPerWeek } from "./component.js";
-import Main from "./pages/main.js";
-import { Domitory, YangJinjae, YangSungjae, MainBuilding } from "./pages/dormitory.js";
+import Main from "./pages/Main.js";
+import { Domitory, YangJinjae, YangSungjae, MainBuilding } from "./pages/Dormitory.js";
 
 function App() {
   return (

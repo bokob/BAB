@@ -1,0 +1,94 @@
+.tgd {
+  border-collapse: collapse;
+  border-color: #aaa;
+  border-spacing: 0;
+}
+.tgd td {
+  background-color: #fff;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tgd th {
+  background-color: #b82d46;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tgd .tg-qxis {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+.tgd .tg-n6kf {
+  background-color: #b82d46;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tgc {
+  border-collapse: collapse;
+  border-color: #aaa;
+  border-spacing: 0;
+}
+.tgc td {
+  background-color: #fff;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tgc th {
+  background-color: #b82d46;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tgc .tg-kelx {
+  border-color: inherit;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+.tgc .tg-mn60 {
+  background-color: #b82d46;
+  border-color: inherit;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+.tgc .tg-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
