@@ -48,3 +48,12 @@ def merge_day_meal(date_list, morning_list, lunch_list, evening_list): # 각 요
 def get_weak_meal(day_list, day_meal):  # 주간 식단표 딕셔너리 만들기
     weak_meal=dict(zip(day_list,day_meal))
     return weak_meal
+
+date_list = make_date_list(bsObject)
+morning_list=make_morning_list(bsObject)
+lunch_list = make_lunch_list(bsObject)
+evening_list=make_evening_list(bsObject)
+day_meal = merge_day_meal(date_list,morning_list,lunch_list,evening_list)
+weak_meal=get_weak_meal(day_list,day_meal)
+
+print(weak_meal)

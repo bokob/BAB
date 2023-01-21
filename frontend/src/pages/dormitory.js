@@ -1,5 +1,4 @@
-import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import { Header } from "./../component.js";
+import Header from "./../components/Header";
 
 function Domitory(props) {
   return (
@@ -7,10 +6,7 @@ function Domitory(props) {
       <Header />
       {props.place}
       <div>
-        <table
-          className="contTable_c m_table_c margin_t_30"
-          style={{ textAlign: "center" }}
-        >
+        <table className="contTable_c m_table_c margin_t_30" style={{ textAlign: "center" }}>
           <colgroup>
             <col style={{ width: "10%" }} />
             <col style={{ width: "13%" }} />

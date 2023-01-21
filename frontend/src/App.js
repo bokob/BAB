@@ -1,24 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import {
-  Nav,
-  Navbar,
-  Container,
-  Card,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+// import {
+//   Nav,
+//   Navbar,
+//   Container,
+//   Card,
+//   Button,
+//   Row,
+//   Col,
+// } from "react-bootstrap";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { Header, TodayMeal, Clock, Today, MealsPerWeek } from "./component.js";
 import Main from "./pages/main.js";
-import {
-  Domitory,
-  YangJinjae,
-  YangSungjae,
-  MainBuilding,
-} from "./pages/dormitory.js";
+import { Domitory, YangJinjae, YangSungjae, MainBuilding } from "./pages/dormitory.js";
 
 function App() {
   return (
