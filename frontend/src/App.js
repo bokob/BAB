@@ -1,16 +1,5 @@
 import "./App.css";
-// import {
-//   Nav,
-//   Navbar,
-//   Container,
-//   Card,
-//   Button,
-//   Row,
-//   Col,
-// } from "react-bootstrap";
-import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
-import { useState } from "react";
-import { Header, TodayMeal, Clock, Today, MealsPerWeek } from "./component.js";
+import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main.js";
 import { Domitory, YangJinjae, YangSungjae, MainBuilding } from "./pages/Dormitory.js";
 

@@ -3,7 +3,6 @@ import Clock from "../components/Clock";
 import TodayMeal from "../components/TodayMeal";
 import { Row, Col, Container } from "react-bootstrap";
 import { CafeteriaTimeTable, DormitoryTimeTalbe } from "./../components/TimeTable";
-import { Tabs, Tab, Sonnet } from "react-bootstrap";
 
 function Main() {
   let place = ["본관", "양성재", "양진재", "한빛식당", "별빛식당", "은하수식당"];
@@ -12,7 +11,6 @@ function Main() {
     <div>
       <Header />
       <Clock />
-
       <Container fluid>
         <Row>
           <Col>
