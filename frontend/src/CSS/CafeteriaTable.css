@@ -1,0 +1,147 @@
+/*식당메뉴*/
+.restaurant {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.restaurant .navbar {
+  padding: 8px;
+}
+
+.restaurant a {
+  min-width: 25px;
+  text-align: center;
+  color: #35383b;
+  font-size: 16px;
+}
+
+.restaurant .table {
+  color: #35383b;
+}
+.restaurant .table td,
+.table th {
+  border-top: none;
+}
+.restaurant .table .row-time {
+  background: #8e223f;
+  color: #fff;
+}
+.restaurant .table .tbody {
+  display: flex;
+  align-items: flex-start;
+}
+
+.restaurant .row .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-result {
+  display: none;
+}
+
+.menu {
+  min-width: 180px;
+  min-height: 180px;
+}
+
+.fixed-body {
+  min-height: 380px;
+}
+
+.menu-body + .menu-body {
+  margin-top: 16px;
+}
+
+.menu .card-header {
+  -ms-word-break: keep-all;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.menu .card-header,
+.card.menu .card-body {
+  padding: 16px;
+}
+.menu .card-body li {
+  font-size: 1rem;
+}
+
+.menu .commas {
+  font-weight: 700;
+}
+
+.row-label {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu .card {
+    display: flex;
+    flex-direction: row;
+    border: 0;
+  }
+  .menu .menu-body {
+    border: 1px solid #dfe4e8;
+    border-radius: 0;
+  }
+  .menu .menu-body .card-header {
+    border-bottom: none;
+  }
+  .menu-body h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    min-width: 130px;
+  }
+  .menu-body + .menu-body {
+    margin-top: 0;
+  }
+  .fixed-body {
+    min-height: 0;
+  }
+
+  .restaurant .row .date h4 {
+    font-size: 1rem;
+  }
+  #menu-table table thead th {
+    font-size: 16px;
+    display: none;
+  }
+  #menu-table table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  #menu-table table tbody tr th.row-label {
+    display: inline-block;
+    width: 100%;
+  }
+  #menu-table table tbody tr th.row-label.time {
+    display: inline-block;
+    width: 100%;
+    background: #8e223f;
+    color: #fff;
+  }
+  #menu-table table tbody tr th:not(.row-label) {
+    display: none;
+  }
+  #menu-table table tbody td {
+    display: block;
+    position: relative;
+    min-height: 2rem;
+  }
+  #menu-table table tbody td.item:before {
+    display: none;
+  }
+  #menu-table table tbody td:before {
+    white-space: nowrap;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    font-weight: 500;
+    background-color: Gainsboro;
+  }
+}

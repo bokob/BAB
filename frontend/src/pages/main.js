@@ -40,26 +40,6 @@ function Main() {
       <div style={{ width: "50%", float: "right" }}>
         <CafeteriaTimeTable />
       </div>
-
-      {/* <Container>
-        <Row>
-          <Col md={{ span: 2, offset: 2 }}>
-            <DormitoryTimeTalbe />
-          </Col>
-          <Col md={{ span: 2, offset: 2 }}>
-            <CafeteriaTimeTable />
-          </Col>
-        </Row>
-      </Container> */}
-
-      {/* <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-        <Tab eventKey="home" title="Home">
-          <DormitoryTimeTalbe /> <CafeteriaTimeTable />
-        </Tab>
-        <Tab eventKey="profile" title="Profile">
-          2
-        </Tab>
-      </Tabs> */}
     </div>
   );
 }

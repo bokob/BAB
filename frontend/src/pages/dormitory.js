@@ -1,4 +1,4 @@
-import "./../CSS/Table.css";
+import "./../CSS/DormitoryTable.css";
 
 function Domitory(props) {
   // FaseAPI를 통해서 FireBase 접근해서 꺼내온다.
@@ -25,7 +25,7 @@ function Domitory(props) {
           </thead>
           <tbody>
             {[1, 2, 3, 4, 5, 6, 7].map(function (element, i) {
-              return <DayMeal />;
+              return <DormitoryDayMeal />;
             })}
           </tbody>
         </table>
@@ -56,7 +56,7 @@ function YangJinjae() {
   );
 }
 
-function DayMeal() {
+function DormitoryDayMeal() {
   return (
     <tr id="2023-01-02">
       <td classNameName="foodday">
@@ -64,13 +64,13 @@ function DayMeal() {
         <br />
       </td>
       {[1, 2, 3].map(() => (
-        <Meal />
+        <DormitoryMeal />
       ))}
     </tr>
   );
 }
 
-function Meal() {
+function DormitoryMeal() {
   return (
     <td className="time">
       {" "}
