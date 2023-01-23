@@ -2,11 +2,11 @@ import "./../CSS/TimeTable.css";
 
 function DormitoryTimeTalbe() {
   return (
-    <table className="tgd" style={{ width: "300px" }}>
+    <table className="tgd" style={{ width: "668px", height: "250px", marginLeft: "auto", marginRight: "auto" }}>
       <colgroup>
         <col style={{ width: "68px" }} />
-        <col style={{ width: "140px" }} />
-        <col style={{ width: "140px" }} />
+        <col style={{ width: "300px" }} />
+        <col style={{ width: "300px" }} />
       </colgroup>
       <thead>
         <tr>
@@ -38,7 +38,7 @@ function DormitoryTimeTalbe() {
 
 function CafeteriaTimeTable() {
   return (
-    <table className="tgc" style={{ tableLayout: "fixed", width: "668px" }}>
+    <table className="tgc" style={{ width: "668px", height: "250px", marginLeft: "auto", marginRight: "auto" }}>
       <colgroup>
         <col style={{ width: "68px" }} />
         <col style={{ width: "100px" }} />

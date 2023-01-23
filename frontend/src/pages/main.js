@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Clock from "../components/Clock";
 import TodayMeal from "../components/TodayMeal";
 import { Row, Col, Container } from "react-bootstrap";
@@ -9,7 +8,6 @@ function Main() {
 
   return (
     <div>
-      <Header />
       <Clock />
       <Container fluid>
         <Row>
@@ -36,7 +34,14 @@ function Main() {
 
       <br />
 
-      <Container>
+      <div style={{ width: "50%", float: "left" }}>
+        <DormitoryTimeTalbe />
+      </div>
+      <div style={{ width: "50%", float: "right" }}>
+        <CafeteriaTimeTable />
+      </div>
+
+      {/* <Container>
         <Row>
           <Col md={{ span: 2, offset: 2 }}>
             <DormitoryTimeTalbe />
@@ -45,7 +50,7 @@ function Main() {
             <CafeteriaTimeTable />
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
         <Tab eventKey="home" title="Home">

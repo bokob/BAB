@@ -62,24 +62,24 @@ export default function Header() {
                 <NavDropdown.Divider />
                 <NavDropdown.Item
                   onClick={() => {
-                    navigate("/한빛");
+                    navigate("/한빛식당");
                   }}
                 >
-                  한빛
+                  한빛식당
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   onClick={() => {
-                    navigate("/별빛");
+                    navigate("/별빛식당");
                   }}
                 >
-                  별빛
+                  별빛식당
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   onClick={() => {
-                    navigate("/은하수");
+                    navigate("/은하수식당");
                   }}
                 >
-                  은하수
+                  은하수식당
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

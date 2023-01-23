@@ -51,3 +51,9 @@
 #nav-dropdown {
   color: white;
 }
+
+.MealPerWeek {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
