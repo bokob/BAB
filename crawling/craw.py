@@ -1,11 +1,16 @@
-# 양진재 금주
+# 금주 모든 기숙사 식단 크롤링
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import datetime
 
-html = urlopen("https://dorm.chungbuk.ac.kr/home/sub.php?menukey=20041&type=3")
+html1 = urlopen("https://dorm.chungbuk.ac.kr/home/sub.php?menukey=20041&type=1") # 본관
+html2 = urlopen("https://dorm.chungbuk.ac.kr/home/sub.php?menukey=20041&type=2") # 양성재
+html3 = urlopen("https://dorm.chungbuk.ac.kr/home/sub.php?menukey=20041&type=3") # 양진재
 
-bsObject = BeautifulSoup(html, "html.parser")
+bsObject1 = BeautifulSoup(html1, "html.parser")
+bsObject2 = BeautifulSoup(html2, "html.parser")
+bsObject3 = BeautifulSoup(html3, "html.parser")
+bsObject=[bsObject1,bsObject2,bsObject3]
 
 def make_date_list(bsObject): # 날짜 리스트 만들기
     foodday = bsObject.findAll('td', {'class':{'foodday'}}) # 날짜 및 요일
@@ -64,12 +69,15 @@ def get_weak_meal(day_list, day_meal):  # 주간 식단표 딕셔너리 만들�
 
 
 
-date_list = make_date_list(bsObject)
-day_list = make_day_list_matches_date(date_list)
-morning_list=make_morning_list(bsObject)
-lunch_list = make_lunch_list(bsObject)
-evening_list=make_evening_list(bsObject)
-day_meal = merge_day_meal(date_list,morning_list,lunch_list,evening_list)
-weak_meal=get_weak_meal(day_list,day_meal)
+this_week=[]
+for i in range(3):
+    date_list = make_date_list(bsObject[i])
+    day_list = make_day_list_matches_date(date_list)
+    morning_list=make_morning_list(bsObject[i])
+    lunch_list = make_lunch_list(bsObject[i])
+    evening_list=make_evening_list(bsObject[i])
+    day_meal = merge_day_meal(date_list,morning_list,lunch_list,evening_list)
+    weak_meal=get_weak_meal(day_list,day_meal)
+    this_week.append(weak_meal)
 
-print(weak_meal)
+print(this_week)
