@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 export default function TodayMeal(props) {
   let place = props.place;
   let address = "/" + place;
-  console.log(address);
+  //console.log(address);
 
   return (
     <>

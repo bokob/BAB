@@ -1,4 +1,4 @@
-import "./../CSS/TimeTable.css";
+import "./../css/TimeTable.css";
 
 function DormitoryTimeTalbe() {
   return (
@@ -69,7 +69,7 @@ function CafeteriaTimeTable() {
         <tr>
           <td>아점</td>
           <td>10:00 ~ 13:00</td>
-          <td>X</td>
+          <td>10:00 ~ 13:00</td>
           <td>X</td>
           <td>X</td>
           <td>X</td>
@@ -78,7 +78,7 @@ function CafeteriaTimeTable() {
         <tr>
           <td>점심</td>
           <td>11:00 ~ 14:00</td>
-          <td>X</td>
+          <td>11:00 ~ 14:00</td>
           <td>11:30 ~ 14:00</td>
           <td>11:30 ~ 14:00</td>
           <td>11:30 ~ 13:30</td>
@@ -86,8 +86,8 @@ function CafeteriaTimeTable() {
         </tr>
         <tr>
           <td>저녁</td>
-          <td>16:30:18:30</td>
-          <td>X</td>
+          <td>16:30 ~ 18:30</td>
+          <td>16:30 ~ 17:30</td>
           <td>X</td>
           <td>X</td>
           <td>17:30 ~ 19:00</td>

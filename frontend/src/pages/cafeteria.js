@@ -1,4 +1,8 @@
-import "./../CSS/CafeteriaTable.css";
+import "./../css/CafeteriaTable.css";
+import { GetMondayToFriday } from "../function/GetMondayToFriday.js";
+
+let dateHeader = GetMondayToFriday(); // 날짜 Array
+let day = ["월요일", "화요일", " 수요일", "목요일", "금요일"]; // 요일
 
 function TestHan() {
   return (
@@ -10,9 +14,13 @@ function TestHan() {
             <thead>
               <tr>
                 {
-                  // 대충 이런 형태로 만들 예정
-                  ["월", "화", "수", "목", "금"].map(function (element, i) {
-                    return <th class="weekday-title">01.23({element})</th>;
+                  // 날자 및 요일
+                  dateHeader.map(function (element, i) {
+                    return (
+                      <th class="weekday-title">
+                        {element}({day[i]})
+                      </th>
+                    );
                   })
                 }
               </tr>
@@ -80,29 +88,18 @@ function TestLight() {
             <thead>
               <tr>
                 {
-                  // 대충 이런 형태로 만들 예정
-                  ["월", "화", "수", "목", "금"].map(function (element, i) {
-                    return <th class="weekday-title">01.23({element})</th>;
+                  // 날자 및 요일
+                  dateHeader.map(function (element, i) {
+                    return (
+                      <th class="weekday-title">
+                        {element}({day[i]})
+                      </th>
+                    );
                   })
                 }
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th colspan="5" class="row-time">
-                  아점코너 (오전 10:00 ~ 오후 1:00)
-                </th>
-              </tr>
-              <tr>
-                {
-                  // 운영 안하면 null로 표시해서 비워버리게 표현예정
-                  [null, 1, null, 3, 4].map(function (element, i) {
-                    if (element != null) return <CafeteriaMeal />;
-                    else return <td id="table-18-8-16-0"></td>;
-                  })
-                }
-              </tr>
-
               <tr>
                 <th colspan="5" class="row-time">
                   점심식사 (오전 11:00 ~ 오후 2:00)
@@ -150,29 +147,18 @@ function TestMilky() {
             <thead>
               <tr>
                 {
-                  // 대충 이런 형태로 만들 예정
-                  ["월", "화", "수", "목", "금"].map(function (element, i) {
-                    return <th class="weekday-title">01.23({element})</th>;
+                  // 날자 및 요일
+                  dateHeader.map(function (element, i) {
+                    return (
+                      <th class="weekday-title">
+                        {element}({day[i]})
+                      </th>
+                    );
                   })
                 }
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th colspan="5" class="row-time">
-                  아점코너 (오전 10:00 ~ 오후 1:00)
-                </th>
-              </tr>
-              <tr>
-                {
-                  // 운영 안하면 null로 표시해서 비워버리게 표현예정
-                  [null, 1, null, 3, 4].map(function (element, i) {
-                    if (element != null) return <CafeteriaMeal />;
-                    else return <td id="table-18-8-16-0"></td>;
-                  })
-                }
-              </tr>
-
               <tr>
                 <th colspan="5" class="row-time">
                   점심식사 (오전 11:00 ~ 오후 2:00)
@@ -231,16 +217,17 @@ function CafeteriaMeal() {
     <td id="table-20-6-12-{0:월, 1:화, ...}">
       <div class="menu" data-table="{0:월, 1:화, ...}">
         <div class="card menu-body ">
-          <h6 class="card-header">오징어야채무침</h6>
+          <h6 class="card-header">메인요리</h6>
           <div class="card-body">
-            <li class="side">요구르트</li>
-            <li class="side">포기김치</li>
-            <li class="side">콩나물무침</li>
-            <li class="side">통배추된장국</li>
-            <li class="side">자장면/자장소스</li>
-            <li class="side">단무지무침</li>
-            <hr />￦<span class="add commas">7,000</span>
-            <br />￦<span class="add commas">6,000</span>(조합원)
+            {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함*/}
+            <li class="side">반찬1</li>
+            <li class="side">반찬2</li>
+            <li class="side">반찬3</li>
+            <li class="side">반찬4</li>
+            <li class="side">반찬5</li>
+            <li class="side">반찬6</li>
+            <hr />￦<span class="add commas">정가</span>
+            <br />￦<span class="add commas">할인가</span>(조합원)
           </div>
         </div>
       </div>

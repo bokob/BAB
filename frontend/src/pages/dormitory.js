@@ -1,4 +1,4 @@
-import "./../CSS/DormitoryTable.css";
+import "./../css/DormitoryTable.css";
 
 function Domitory(props) {
   // FaseAPI를 통해서 FireBase 접근해서 꺼내온다.
