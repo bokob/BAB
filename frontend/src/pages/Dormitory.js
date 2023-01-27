@@ -1,7 +1,37 @@
 import "./../css/DormitoryTable.css";
 
+async function GetMainBuildingThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/본관`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
+async function GetYangsungjaeThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/양성재`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
+async function GetYangjinjaeThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/양진재`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
 function Domitory(props) {
   // FaseAPI를 통해서 FireBase 접근해서 꺼내온다.
+
+  if (props.place === "본관") {
+    GetMainBuildingThisWeekMeal();
+  } else if (props.place === "양성재") {
+    GetYangsungjaeThisWeekMeal();
+  } else if (props.place) {
+    GetYangjinjaeThisWeekMeal();
+  }
+
   return (
     <>
       <h2>{props.place}</h2>

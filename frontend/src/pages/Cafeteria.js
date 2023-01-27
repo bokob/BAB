@@ -1,10 +1,32 @@
 import "./../css/CafeteriaTable.css";
 import { GetMondayToFriday } from "../function/GetMondayToFriday.js";
 
+async function GetHanbitThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/한빛식당`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
+async function GetStarLightThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/별빛식당`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
+async function GetMilkywayThisWeekMeal() {
+  let url = `http://127.0.0.1:8000/은하수식당`;
+  const response = await fetch(url, { headers: { Accept: "application / json" }, method: "GET" });
+  let result = await response.json();
+  console.log(result);
+}
+
 let dateHeader = GetMondayToFriday(); // 날짜 Array
 let day = ["월요일", "화요일", " 수요일", "목요일", "금요일"]; // 요일
 
 function TestHan() {
+  GetHanbitThisWeekMeal();
   return (
     <>
       <h1>한빛식당</h1>
@@ -79,6 +101,7 @@ function TestHan() {
 }
 
 function TestLight() {
+  GetStarLightThisWeekMeal();
   return (
     <>
       <h1>별빛식당</h1>
@@ -138,6 +161,7 @@ function TestLight() {
 }
 
 function TestMilky() {
+  GetMilkywayThisWeekMeal();
   return (
     <>
       <h1>은하수식당</h1>
