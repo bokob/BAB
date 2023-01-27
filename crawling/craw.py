@@ -1,3 +1,7 @@
+# 자동실행 라이브러리 및 모듈
+import schedule
+import time
+
 # 식단 크롤링 필요한 라이브러리 및 모듈
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
@@ -9,8 +13,9 @@ from firebase_admin import credentials
 from firebase_admin import db
 
 # 파이어베이스 객체 생성
-cred = credentials.Certificate("../mykey.json")
-firebase_admin.initialize_app(cred,{'databaseURL':'https://bab-db-3ebb8-default-rtdb.firebaseio.com/'})
+if not firebase_admin._apps:    # shedule 모듈 사용하면 이미 생성되어있을 때 오류가 나기 때문에 조건문으로 확인한다.
+    cred = credentials.Certificate("../mykey.json")
+    firebase_admin.initialize_app(cred,{'databaseURL':'https://bab-db-3ebb8-default-rtdb.firebaseio.com/'})
 
 
 # 기숙사 크롤링
