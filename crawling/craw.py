@@ -88,9 +88,7 @@ def make_week_time_meal_list(bsObject, id_front):   # 한 주의 특정 시간�
 ###
 
 
-
-
-
+# 기숙사 식단 크롤링 후 파이어베이스에 저장
 def save_dormitory_meal_info_to_db():
     
     # 기숙사 크롤링
@@ -164,6 +162,7 @@ def save_dormitory_meal_info_to_db():
     print("성공1")
     
 
+# 학생식당 식단 크롤링 후 파이어베이스에 저장
 def save_cafeteria_meal_info_to_db():
     
     # 학식 크롤링 
@@ -201,12 +200,8 @@ def save_cafeteria_meal_info_to_db():
 
 
 # 매주 월요일 00시 00분에 크롤링 실행
-# schedule.every().monday.at("00:00").do(save_dormitory_meal_info_to_db)
-# schedule.every().monday.at("00:00").do(save_cafeteria_meal_info_to_db)
-
-
-schedule.every(1).seconds.do(save_dormitory_meal_info_to_db)
-schedule.every(1).seconds.do(save_cafeteria_meal_info_to_db)
+schedule.every().monday.at("00:00").do(save_dormitory_meal_info_to_db)
+schedule.every().monday.at("00:00").do(save_cafeteria_meal_info_to_db)
 
 while True:
     schedule.run_pending()
