@@ -47,18 +47,18 @@ async def main_page():
     return hello
 
 @app.get('/본관')
-async def main_building_this_week_meal_page():
-    result = main_building_this_week.get()
+async def main_building_week_meal_page():
+    result = [main_building_this_week.get(), main_building_next_week.get()]
     return result
 
 @app.get('/양성재')
-async def yangsungjae_this_week_meal_page():
-    result = yangsungjae_this_week.get()
+async def yangsungjae_week_meal_page():
+    result = [yangsungjae_this_week.get(), yangsungjae_next_week.get()]
     return result
 
 @app.get('/양진재')
-async def yangjinjae_this_week_meal_page():
-    result = yangjinjae_this_week.get()
+async def yangjinjae_week_meal_page():
+    result = [yangjinjae_this_week.get(), yangjinjae_this_week.get()]
     return result
 
 @app.get('/한빛식당')

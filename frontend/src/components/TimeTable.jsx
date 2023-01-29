@@ -51,9 +51,9 @@ function CafeteriaTimeTable() {
       <thead>
         <tr>
           <th>학생식당</th>
-          <th colspan="2">한빛</th>
-          <th colspan="2">별빛</th>
-          <th colspan="2">은하수</th>
+          <th colSpan="2">한빛</th>
+          <th colSpan="2">별빛</th>
+          <th colSpan="2">은하수</th>
         </tr>
       </thead>
       <tbody>
