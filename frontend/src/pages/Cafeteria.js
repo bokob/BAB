@@ -21,7 +21,7 @@ function Hanbit() {
   console.log(temp[0]);
   console.log(temp[0].아점);
   console.log(temp[0].아점[0]);
-  console.log(temp[0].아점[0][2]);
+  console.log(temp[0].아점[1][1]);
   //let thisWeek = temp[0][0];
   //console.log(thisWeek);
 
@@ -396,6 +396,8 @@ function TestCafeteriaMeal(props) {
   // console.log(props.info);
   // console.log(props.checkKeyBrunch);
   // console.log(props.checkKeyBrunchIterator);
+
+  console.log(info[checkKey[checkKeyIterator]]);
 
   return (
     <td id="table-20-6-12-{0:월, 1:화, ...}">

@@ -163,104 +163,147 @@ function YangjinjaeTodayMeal(props) {
 function HanbitTodayMeal(props) {
   let place = props.place;
   let address = "/" + place;
-  return (
-    <>
-      <Card>
-        <Card.Header>
-          <Link to={address}>{place}</Link>
-        </Card.Header>
-        <Card.Body>
-          <Card.Title>🛌아침🛌</Card.Title>
-          <Card.Text>
-            {}
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-          <Card.Title>☀점심☀</Card.Title>
-          <Card.Text>
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-          <Card.Text>
-            <Card.Title>🌙저녁🌙</Card.Title>
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </>
-  );
+  let today = new Date().getDay();
+
+  let temp = useSelector((state) => {
+    return state.hanbitWeekMeal;
+  });
+
+  // console.log(temp);
+  // console.log(temp[0]);
+  // console.log(temp[0].석식);
+  // console.log(temp[0].석식[1][1]);
+
+  if (temp.length > 0) {
+    let brunch, lunch, dinner;
+
+    for (let i = 0; i < temp[0].아점.length; i++) {
+      if (temp[0].아점[i].hasOwnProperty(today)) {
+        //console.log(temp[0].아점[i][today]);
+        brunch = temp[0].아점[i][today];
+      }
+    }
+
+    for (let i = 0; i < temp[0].점심.length; i++) {
+      if (temp[0].점심[i].hasOwnProperty(today)) {
+        //console.log(temp[0].점심[i][today]);
+        lunch = temp[0].점심[i][today];
+      }
+    }
+
+    for (let i = 0; i < temp[0].석식.length; i++) {
+      if (temp[0].석식[i].hasOwnProperty(today)) {
+        console.log(temp[0].석식[i][today]);
+        //console.log("성공");
+        dinner = temp[0].석식[i][today];
+      }
+    }
+
+    return (
+      <>
+        <Card>
+          <Card.Header>
+            <Link to={address}>{place}</Link>
+          </Card.Header>
+          <Card.Body>
+            <Card.Title>🛌아침🛌</Card.Title>
+            <Card.Text>{brunch}</Card.Text>
+            <Card.Title>☀점심☀</Card.Title>
+            <Card.Text>{lunch}</Card.Text>
+            <Card.Text>
+              <Card.Title>🌙저녁🌙</Card.Title>
+              {dinner}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </>
+    );
+  } else {
+    return <>로딩중</>;
+  }
 }
 
 function StarLightTodayMeal(props) {
   let place = props.place;
   let address = "/" + place;
-  return (
-    <>
-      <Card>
-        <Card.Header>
-          <Link to={address}>{place}</Link>
-        </Card.Header>
-        <Card.Body>
-          <Card.Title>☀점심☀</Card.Title>
-          <Card.Text>
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </>
-  );
+  let today = new Date().getDay();
+
+  let temp = useSelector((state) => {
+    return state.starLightWeekMeal;
+  });
+
+  if (temp.length > 0) {
+    let lunch;
+
+    for (let i = 0; i < temp[0].점심.length; i++) {
+      if (temp[0].점심[i].hasOwnProperty(today)) {
+        //console.log(temp[0].점심[i][today]);
+        lunch = temp[0].점심[i][today];
+      }
+    }
+    return (
+      <>
+        <Card>
+          <Card.Header>
+            <Link to={address}>{place}</Link>
+          </Card.Header>
+          <Card.Body>
+            <Card.Title>☀점심☀</Card.Title>
+            <Card.Text>{lunch}</Card.Text>
+          </Card.Body>
+        </Card>
+      </>
+    );
+  } else {
+    return <>로딩중</>;
+  }
 }
 
 function MilkywayTodayMeal(props) {
   let place = props.place;
   let address = "/" + place;
-  return (
-    <>
-      <Card>
-        <Card.Header>
-          <Link to={address}>{place}</Link>
-        </Card.Header>
-        <Card.Body>
-          <Card.Title>☀점심☀</Card.Title>
-          <Card.Text>
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-          <Card.Text>
-            <Card.Title>🌙저녁🌙</Card.Title>
-            메뉴1
-            <br /> 메뉴2
-            <br /> 메뉴3
-            <br /> 메뉴4
-            <br /> 메뉴5 <br />
-            에너지:(칼로리) Kcal 단백질:(단백질) g
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </>
-  );
+  let today = new Date().getDay();
+
+  let temp = useSelector((state) => {
+    return state.milkywayWeekMeal;
+  });
+
+  console.log(temp);
+
+  if (temp.length > 0) {
+    let lunch, dinner;
+
+    for (let i = 0; i < temp[0].점심.length; i++) {
+      if (temp[0].점심[i].hasOwnProperty(today)) {
+        //console.log(temp[0].점심[i][today]);
+        lunch = temp[0].점심[i][today];
+      }
+    }
+
+    if (!temp[0].hasOwnProperty("석식")) {
+      dinner = "방학 미운영";
+    }
+
+    return (
+      <>
+        <Card>
+          <Card.Header>
+            <Link to={address}>{place}</Link>
+          </Card.Header>
+          <Card.Body>
+            <Card.Title>☀점심☀</Card.Title>
+            <Card.Text>{lunch}</Card.Text>
+            <Card.Text>
+              <Card.Title>🌙저녁🌙</Card.Title>
+              {dinner}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </>
+    );
+  } else {
+    return <>로딩중</>;
+  }
 }
 
 export { TodayMeal, MainBuildingTodayMeal, YangsungjaeTodayMeal, YangjinjaeTodayMeal, HanbitTodayMeal, StarLightTodayMeal, MilkywayTodayMeal };
