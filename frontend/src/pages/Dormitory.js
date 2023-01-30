@@ -174,7 +174,7 @@ function DormitoryDayMeal(props) {
   }
   return (
     <tr id="2023-01-02">
-      <td classNameName="foodday">
+      <td className="foodday">
         {day} <br /> {props.info[0]}
         <br />
       </td>

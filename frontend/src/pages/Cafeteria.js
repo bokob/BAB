@@ -47,28 +47,68 @@ function Hanbit() {
             </thead>
             <tbody>
               <tr>
-                <th colSpan="5" class="row-time">
+                <th colSpan="5" className="row-time">
                   아점코너 (오전 10:00 ~ 오후 1:00)
                 </th>
               </tr>
               <tr>
                 {temp[0].아점.map(function (element, i) {
-                  if (element.hasOwnProperty(0)) {
-                    checkKeyBrunch.push(0);
-                  } else if (element.hasOwnProperty(1)) {
-                    checkKeyBrunch.push(1);
-                  } else if (element.hasOwnProperty(2)) {
-                    checkKeyBrunch.push(2);
-                  } else if (element.hasOwnProperty(3)) {
-                    checkKeyBrunch.push(3);
-                  } else if (element.hasOwnProperty(4)) {
-                    checkKeyBrunch.push(4);
+                  console.log(checkKeyBrunch);
+                  console.log(temp[0].아점);
+                  // if (element.hasOwnProperty(0)) {
+                  //   checkKeyBrunch.push(0);
+                  // } else if (element.hasOwnProperty(1)) {
+                  //   checkKeyBrunch.push(1);
+                  // } else if (element.hasOwnProperty(2)) {
+                  //   checkKeyBrunch.push(2);
+                  // } else if (element.hasOwnProperty(3)) {
+                  //   checkKeyBrunch.push(3);
+                  // } else if (element.hasOwnProperty(4)) {
+                  //   checkKeyBrunch.push(4);
+                  // }
+
+                  switch (i) {
+                    case 0: {
+                      if (element.hasOwnProperty(0)) {
+                        checkKeyBrunch.push(0);
+                        break;
+                      }
+                    }
+                    case 1: {
+                      if (element.hasOwnProperty(1)) {
+                        checkKeyBrunch.push(1);
+                        break;
+                      }
+                    }
+                    case 2: {
+                      if (element.hasOwnProperty(2)) {
+                        checkKeyBrunch.push(2);
+                        break;
+                      }
+                    }
+                    case 3: {
+                      if (element.hasOwnProperty(3)) {
+                        checkKeyBrunch.push(3);
+                        break;
+                      }
+                    }
+                    case 4: {
+                      if (element.hasOwnProperty(4)) {
+                        checkKeyBrunch.push(4);
+                        break;
+                      }
+                    }
+                    default: {
+                      break;
+                    }
                   }
                 })}
 
                 {
                   // 운영 안하면 null로 표시해서 비워버리게 표현예정
                   [0, 1, 2, 3, 4].map(function (element, i) {
+                    console.log(temp[0].아점);
+
                     if (checkKeyBrunch.includes(element)) {
                       checkKeyBrunchIterator += 1;
                       return (
@@ -79,9 +119,7 @@ function Hanbit() {
                           checkKeyBrunchIterator={checkKeyBrunchIterator}
                         />
                       );
-                    } else return <td id="table-18-8-16-0"></td>;
-                    // if (element != null) return <CafeteriaMeal />;
-                    // else return <td id="table-18-8-16-0"></td>;
+                    } else return <td></td>;
                   })
                 }
               </tr>
@@ -93,18 +131,54 @@ function Hanbit() {
               </tr>
               <tr>
                 {temp[0].점심.map(function (element, i) {
-                  if (element.hasOwnProperty(0)) {
-                    checkKeyLunch.push(0);
-                  } else if (element.hasOwnProperty(1)) {
-                    checkKeyLunch.push(1);
-                  } else if (element.hasOwnProperty(2)) {
-                    checkKeyLunch.push(2);
-                  } else if (element.hasOwnProperty(3)) {
-                    checkKeyLunch.push(3);
-                  } else if (element.hasOwnProperty(4)) {
-                    checkKeyLunch.push(4);
+                  // if (element.hasOwnProperty(0)) {
+                  //   checkKeyLunch.push(0);
+                  // } else if (element.hasOwnProperty(1)) {
+                  //   checkKeyLunch.push(1);
+                  // } else if (element.hasOwnProperty(2)) {
+                  //   checkKeyLunch.push(2);
+                  // } else if (element.hasOwnProperty(3)) {
+                  //   checkKeyLunch.push(3);
+                  // } else if (element.hasOwnProperty(4)) {
+                  //   checkKeyLunch.push(4);
+                  // }
+                  switch (i) {
+                    case 0: {
+                      if (element.hasOwnProperty(0)) {
+                        checkKeyLunch.push(0);
+                        break;
+                      }
+                    }
+                    case 1: {
+                      if (element.hasOwnProperty(1)) {
+                        checkKeyLunch.push(1);
+                        break;
+                      }
+                    }
+                    case 2: {
+                      if (element.hasOwnProperty(2)) {
+                        checkKeyLunch.push(2);
+                        break;
+                      }
+                    }
+                    case 3: {
+                      if (element.hasOwnProperty(3)) {
+                        checkKeyLunch.push(3);
+                        break;
+                      }
+                    }
+                    case 4: {
+                      if (element.hasOwnProperty(4)) {
+                        checkKeyLunch.push(4);
+                        break;
+                      }
+                    }
+                    default: {
+                      break;
+                    }
                   }
                 })}
+
                 {[0, 1, 2, 3, 4].map(function (element, i) {
                   if (checkKeyLunch.includes(element)) {
                     checkKeyLunchIterator += 1;
@@ -121,24 +195,60 @@ function Hanbit() {
               </tr>
 
               <tr>
-                <th colSpan="5" class="row-time">
+                <th colSpan="5" className="row-time">
                   석식코너 (오후 4:30 ~ 오후 6:30)
                 </th>
               </tr>
               <tr>
                 {temp[0].석식.map(function (element, i) {
-                  if (element.hasOwnProperty(0)) {
-                    checkKeyDinner.push(0);
-                  } else if (element.hasOwnProperty(1)) {
-                    checkKeyDinner.push(1);
-                  } else if (element.hasOwnProperty(2)) {
-                    checkKeyDinner.push(2);
-                  } else if (element.hasOwnProperty(3)) {
-                    checkKeyDinner.push(3);
-                  } else if (element.hasOwnProperty(4)) {
-                    checkKeyDinner.push(4);
+                  // if (element.hasOwnProperty(0)) {
+                  //   checkKeyDinner.push(0);
+                  // } else if (element.hasOwnProperty(1)) {
+                  //   checkKeyDinner.push(1);
+                  // } else if (element.hasOwnProperty(2)) {
+                  //   checkKeyDinner.push(2);
+                  // } else if (element.hasOwnProperty(3)) {
+                  //   checkKeyDinner.push(3);
+                  // } else if (element.hasOwnProperty(4)) {
+                  //   checkKeyDinner.push(4);
+                  // }
+                  switch (i) {
+                    case 0: {
+                      if (element.hasOwnProperty(0)) {
+                        checkKeyDinner.push(0);
+                        break;
+                      }
+                    }
+                    case 1: {
+                      if (element.hasOwnProperty(1)) {
+                        checkKeyDinner.push(1);
+                        break;
+                      }
+                    }
+                    case 2: {
+                      if (element.hasOwnProperty(2)) {
+                        checkKeyDinner.push(2);
+                        break;
+                      }
+                    }
+                    case 3: {
+                      if (element.hasOwnProperty(3)) {
+                        checkKeyDinner.push(3);
+                        break;
+                      }
+                    }
+                    case 4: {
+                      if (element.hasOwnProperty(4)) {
+                        checkKeyDinner.push(4);
+                        break;
+                      }
+                    }
+                    default: {
+                      break;
+                    }
                   }
                 })}
+
                 {[0, 1, 2, 3, 4].map(function (element, i) {
                   if (checkKeyDinner.includes(element)) {
                     checkKeyDinnerIterator += 1;
@@ -191,24 +301,60 @@ function StarLight() {
             </thead>
             <tbody>
               <tr>
-                <th colSpan="5" class="row-time">
+                <th colSpan="5" className="row-time">
                   점심식사 (오전 11:00 ~ 오후 2:00)
                 </th>
               </tr>
               <tr>
                 {temp[0].점심.map(function (element, i) {
-                  if (element.hasOwnProperty(0)) {
-                    checkKeyLunch.push(0);
-                  } else if (element.hasOwnProperty(1)) {
-                    checkKeyLunch.push(1);
-                  } else if (element.hasOwnProperty(2)) {
-                    checkKeyLunch.push(2);
-                  } else if (element.hasOwnProperty(3)) {
-                    checkKeyLunch.push(3);
-                  } else if (element.hasOwnProperty(4)) {
-                    checkKeyLunch.push(4);
+                  // if (element.hasOwnProperty(0)) {
+                  //   checkKeyLunch.push(0);
+                  // } else if (element.hasOwnProperty(1)) {
+                  //   checkKeyLunch.push(1);
+                  // } else if (element.hasOwnProperty(2)) {
+                  //   checkKeyLunch.push(2);
+                  // } else if (element.hasOwnProperty(3)) {
+                  //   checkKeyLunch.push(3);
+                  // } else if (element.hasOwnProperty(4)) {
+                  //   checkKeyLunch.push(4);
+                  // }
+                  switch (i) {
+                    case 0: {
+                      if (element.hasOwnProperty(0)) {
+                        checkKeyLunch.push(0);
+                        break;
+                      }
+                    }
+                    case 1: {
+                      if (element.hasOwnProperty(1)) {
+                        checkKeyLunch.push(1);
+                        break;
+                      }
+                    }
+                    case 2: {
+                      if (element.hasOwnProperty(2)) {
+                        checkKeyLunch.push(2);
+                        break;
+                      }
+                    }
+                    case 3: {
+                      if (element.hasOwnProperty(3)) {
+                        checkKeyLunch.push(3);
+                        break;
+                      }
+                    }
+                    case 4: {
+                      if (element.hasOwnProperty(4)) {
+                        checkKeyLunch.push(4);
+                        break;
+                      }
+                    }
+                    default: {
+                      break;
+                    }
                   }
                 })}
+
                 {[0, 1, 2, 3, 4].map(function (element, i) {
                   if (checkKeyLunch.includes(element)) {
                     checkKeyLunchIterator += 1;
@@ -281,18 +427,43 @@ function Milkyway() {
               </tr>
               <tr>
                 {temp[0].점심.map(function (element, i) {
-                  if (element.hasOwnProperty(0)) {
-                    checkKeyLunch.push(0);
-                  } else if (element.hasOwnProperty(1)) {
-                    checkKeyLunch.push(1);
-                  } else if (element.hasOwnProperty(2)) {
-                    checkKeyLunch.push(2);
-                  } else if (element.hasOwnProperty(3)) {
-                    checkKeyLunch.push(3);
-                  } else if (element.hasOwnProperty(4)) {
-                    checkKeyLunch.push(4);
+                  switch (i) {
+                    case 0: {
+                      if (element.hasOwnProperty(0)) {
+                        checkKeyLunch.push(0);
+                        break;
+                      }
+                    }
+                    case 1: {
+                      if (element.hasOwnProperty(1)) {
+                        checkKeyLunch.push(1);
+                        break;
+                      }
+                    }
+                    case 2: {
+                      if (element.hasOwnProperty(2)) {
+                        checkKeyLunch.push(2);
+                        break;
+                      }
+                    }
+                    case 3: {
+                      if (element.hasOwnProperty(3)) {
+                        checkKeyLunch.push(3);
+                        break;
+                      }
+                    }
+                    case 4: {
+                      if (element.hasOwnProperty(4)) {
+                        checkKeyLunch.push(4);
+                        break;
+                      }
+                    }
+                    default: {
+                      break;
+                    }
                   }
                 })}
+
                 {[0, 1, 2, 3, 4].map(function (element, i) {
                   if (checkKeyLunch.includes(element)) {
                     checkKeyLunchIterator += 1;
@@ -317,16 +488,40 @@ function Milkyway() {
                 {isVacation.map(function (element, i) {
                   if (!element) {
                     temp[0].석식.map(function (element, i) {
-                      if (element.hasOwnProperty(0)) {
-                        checkKeyDinner.push(0);
-                      } else if (element.hasOwnProperty(1)) {
-                        checkKeyDinner.push(1);
-                      } else if (element.hasOwnProperty(2)) {
-                        checkKeyDinner.push(2);
-                      } else if (element.hasOwnProperty(3)) {
-                        checkKeyDinner.push(3);
-                      } else if (element.hasOwnProperty(4)) {
-                        checkKeyDinner.push(4);
+                      switch (i) {
+                        case 0: {
+                          if (element.hasOwnProperty(0)) {
+                            checkKeyDinner.push(0);
+                            break;
+                          }
+                        }
+                        case 1: {
+                          if (element.hasOwnProperty(1)) {
+                            checkKeyDinner.push(1);
+                            break;
+                          }
+                        }
+                        case 2: {
+                          if (element.hasOwnProperty(2)) {
+                            checkKeyDinner.push(2);
+                            break;
+                          }
+                        }
+                        case 3: {
+                          if (element.hasOwnProperty(3)) {
+                            checkKeyDinner.push(3);
+                            break;
+                          }
+                        }
+                        case 4: {
+                          if (element.hasOwnProperty(4)) {
+                            checkKeyDinner.push(4);
+                            break;
+                          }
+                        }
+                        default: {
+                          break;
+                        }
                       }
 
                       [0, 1, 2, 3, 4].map(function (element, i) {
@@ -397,13 +592,13 @@ function TestCafeteriaMeal(props) {
   // console.log(props.checkKeyBrunch);
   // console.log(props.checkKeyBrunchIterator);
 
-  console.log(info[checkKey[checkKeyIterator]]);
+  //console.log(info[checkKey[checkKeyIterator]]);
 
   return (
     <td id="table-20-6-12-{0:월, 1:화, ...}">
       <div class="menu" data-table="{0:월, 1:화, ...}">
-        <div class="card menu-body ">
-          <div class="card-body">
+        <div className="card menu-body ">
+          <div className="card-body">
             {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함*/}
             {info[checkKey[checkKeyIterator]]}
           </div>
