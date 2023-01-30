@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import "../css/TodayMeal.css";
 
 function TodayMeal(props) {
   let place = props.place;
@@ -70,8 +71,10 @@ function MainBuildingTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>🛌아침🛌</Card.Title>
@@ -105,8 +108,10 @@ function YangsungjaeTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>🛌아침🛌</Card.Title>
@@ -139,8 +144,10 @@ function YangjinjaeTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>🛌아침🛌</Card.Title>
@@ -202,8 +209,10 @@ function HanbitTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>🛌아침🛌</Card.Title>
@@ -244,8 +253,10 @@ function StarLightTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>☀점심☀</Card.Title>
@@ -287,8 +298,10 @@ function MilkywayTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header>
-            <Link to={address}>{place}</Link>
+          <Card.Header className="Card-Header">
+            <Link to={address} className="Card-Header-Place">
+              {place}
+            </Link>
           </Card.Header>
           <Card.Body>
             <Card.Title>☀점심☀</Card.Title>
