@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,12 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-color: #091921; */
-}
+  background-color: #091921;
+} */
 
 .clock {
-  width: 350px; /*시계 너비*/
-  height: 350px; /*시계 높이*/
+  width: 260px; /*시계 너비*/
+  height: 260px; /*시계 높이*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,7 @@ body {
   position: absolute;
   width: 8px;
   height: 80px;
-  background: #ff105e;
+  background: black;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
@@ -83,7 +83,7 @@ body {
   position: absolute;
   width: 4px;
   height: 90px;
-  background: #ff105e;
+  background: black;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
@@ -94,7 +94,7 @@ body {
   position: absolute;
   width: 2px;
   height: 150px;
-  background: black;
+  background: #ff105e;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }

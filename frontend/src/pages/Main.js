@@ -1,4 +1,6 @@
 import Clock from "../components/Clock";
+import AnalogClock from "../components/AnalogClock";
+import DigitalClock from "../components/DigitalClock";
 import {
   YangsungjaeTodayMeal,
   YangjinjaeTodayMeal,
@@ -23,7 +25,8 @@ function Main() {
 
   return (
     <div>
-      <Clock />
+      <AnalogClock />
+      <DigitalClock />
       <Container fluid>
         <Row>
           <Col>

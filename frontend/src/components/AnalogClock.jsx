@@ -19,7 +19,7 @@ export default function AnalogClock() {
   }, []);
 
   return (
-    <div>
+    <div className="d-inline-block align-text-top">
       <div className="clock">
         <div className="hour">
           <div id="hr" className="hr"></div>
