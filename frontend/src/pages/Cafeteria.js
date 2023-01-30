@@ -1,6 +1,7 @@
 import "./../css/CafeteriaTable.css";
 import { GetMondayToFriday } from "../function/GetMondayToFriday.js";
 import { useSelector } from "react-redux";
+import { Badge } from "react-bootstrap";
 
 let dateHeader = GetMondayToFriday(); // 날짜 Array
 let day = ["월요일", "화요일", " 수요일", "목요일", "금요일"]; // 요일
@@ -29,7 +30,13 @@ function Hanbit() {
 
   return (
     <>
-      <h1>한빛식당</h1>
+      <br />
+      <h1>
+        <Badge pill bg="danger">
+          한빛식당
+        </Badge>
+      </h1>
+      <br />
       <div class="row restaurant">
         <div class="table-responsive mb-4" id="menu-table">
           <table class="table">
@@ -256,7 +263,13 @@ function StarLight() {
 
   return (
     <>
-      <h1>별빛식당</h1>
+      <br />
+      <h1>
+        <Badge pill bg="danger">
+          별빛식당
+        </Badge>
+      </h1>
+      <br />
       <div class="row restaurant">
         <div class="table-responsive mb-4" id="menu-table">
           <table class="table">
@@ -366,7 +379,13 @@ function Milkyway() {
 
   return (
     <>
-      <h1>은하수식당</h1>
+      <br />
+      <h1>
+        <Badge pill bg="danger">
+          은하수식당
+        </Badge>
+      </h1>
+      <br />
       <div class="row restaurant">
         <div class="table-responsive mb-4" id="menu-table">
           <table class="table">

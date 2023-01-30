@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Card } from "react-bootstrap";
+import { Card, Spinner } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "./../css/TodayMeal.css";
 
@@ -90,7 +90,7 @@ function MainBuildingTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 
@@ -127,7 +127,7 @@ function YangsungjaeTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 
@@ -163,7 +163,7 @@ function YangjinjaeTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 
@@ -228,7 +228,7 @@ function HanbitTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 
@@ -266,7 +266,7 @@ function StarLightTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 
@@ -315,7 +315,7 @@ function MilkywayTodayMeal(props) {
       </>
     );
   } else {
-    return <>로딩중</>;
+    return <Spinner animation="border" variant="danger" />;
   }
 }
 

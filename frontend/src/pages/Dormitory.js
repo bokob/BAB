@@ -1,5 +1,6 @@
 import "./../css/DormitoryTable.css";
 import { useSelector } from "react-redux";
+import Badge from "react-bootstrap/Badge";
 
 function MainBuilding() {
   let temp = useSelector((state) => {
@@ -13,8 +14,12 @@ function MainBuilding() {
 
   return (
     <>
-      <h2>본관</h2>
       <br />
+      <h1>
+        <Badge pill bg="danger">
+          본관
+        </Badge>
+      </h1>
       <br />
       <div className="">
         <table className="contTable_c m_table_c margin_t_30">
@@ -26,10 +31,18 @@ function MainBuilding() {
           </colgroup>
           <thead>
             <tr>
-              <th scope="col">요일</th>
-              <th scope="col">아침</th>
-              <th scope="col">점심</th>
-              <th scope="col">저녁</th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                요일
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                아침
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                점심
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                저녁
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -61,8 +74,14 @@ function YangSungjae() {
 
   return (
     <>
-      <h2>양성재</h2>
       <br />
+
+      <h1>
+        <Badge pill bg="danger">
+          양성재
+        </Badge>
+      </h1>
+
       <br />
       <div className="">
         <table className="contTable_c m_table_c margin_t_30">
@@ -74,10 +93,18 @@ function YangSungjae() {
           </colgroup>
           <thead>
             <tr>
-              <th scope="col">요일</th>
-              <th scope="col">아침</th>
-              <th scope="col">점심</th>
-              <th scope="col">저녁</th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                요일
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                아침
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                점심
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                저녁
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -107,8 +134,14 @@ function YangJinjae() {
 
   return (
     <>
-      <h2>양진재</h2>
       <br />
+
+      <h1>
+        <Badge pill bg="danger">
+          양진재
+        </Badge>
+      </h1>
+
       <br />
       <div className="">
         <table className="contTable_c m_table_c margin_t_30">
@@ -120,10 +153,18 @@ function YangJinjae() {
           </colgroup>
           <thead>
             <tr>
-              <th scope="col">요일</th>
-              <th scope="col">아침</th>
-              <th scope="col">점심</th>
-              <th scope="col">저녁</th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                요일
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                아침
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                점심
+              </th>
+              <th scope="col" style={{ backgroundColor: "#F8F8F8" }}>
+                저녁
+              </th>
             </tr>
           </thead>
           <tbody>
