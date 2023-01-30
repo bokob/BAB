@@ -1,5 +1,4 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { YangJinjae } from "./pages/Dormitory";
 
 let mainbuildingWeekMeal = createSlice({
   name: "mainbuildingWeekMeal",

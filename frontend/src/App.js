@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main.js";
 import Header from "./components/Header.jsx";
@@ -12,8 +13,6 @@ import {
   GetStarLightWeekMeal,
   GetMilkywayWeekMeal,
 } from "./function/GetWeekMeal";
-
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   changeMainbuildingWeekMeal,
@@ -23,8 +22,6 @@ import {
   changeStarLightWeekMeal,
   changeMilkywayWeekMeal,
 } from "./store";
-
-// import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   let dispatch = useDispatch();

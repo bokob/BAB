@@ -14,14 +14,6 @@ function GetMondayToFriday() {
   }
 
   return result;
-
-  // result.push(date);
-  // for (var i = 0; i < 7; i++) {
-  //   today -= 86400000;
-  //   result.push(new Date(today).toLocaleDateString());
-  // }
-
-  // return result;
 }
 
 export { GetMondayToFriday };

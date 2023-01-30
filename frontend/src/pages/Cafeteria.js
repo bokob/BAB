@@ -17,11 +17,11 @@ function Hanbit() {
   let checkKeyDinner = [];
   let checkKeyDinnerIterator = -1;
 
-  console.log(temp);
-  console.log(temp[0]);
-  console.log(temp[0].아점);
-  console.log(temp[0].아점[0]);
-  console.log(temp[0].아점[1][1]);
+  // console.log(temp);
+  // console.log(temp[0]);
+  // console.log(temp[0].아점);
+  // console.log(temp[0].아점[0]);
+  // console.log(temp[0].아점[1][1]);
   //let thisWeek = temp[0][0];
   //console.log(thisWeek);
 
@@ -53,20 +53,6 @@ function Hanbit() {
               </tr>
               <tr>
                 {temp[0].아점.map(function (element, i) {
-                  console.log(checkKeyBrunch);
-                  console.log(temp[0].아점);
-                  // if (element.hasOwnProperty(0)) {
-                  //   checkKeyBrunch.push(0);
-                  // } else if (element.hasOwnProperty(1)) {
-                  //   checkKeyBrunch.push(1);
-                  // } else if (element.hasOwnProperty(2)) {
-                  //   checkKeyBrunch.push(2);
-                  // } else if (element.hasOwnProperty(3)) {
-                  //   checkKeyBrunch.push(3);
-                  // } else if (element.hasOwnProperty(4)) {
-                  //   checkKeyBrunch.push(4);
-                  // }
-
                   switch (i) {
                     case 0: {
                       if (element.hasOwnProperty(0)) {
@@ -131,17 +117,6 @@ function Hanbit() {
               </tr>
               <tr>
                 {temp[0].점심.map(function (element, i) {
-                  // if (element.hasOwnProperty(0)) {
-                  //   checkKeyLunch.push(0);
-                  // } else if (element.hasOwnProperty(1)) {
-                  //   checkKeyLunch.push(1);
-                  // } else if (element.hasOwnProperty(2)) {
-                  //   checkKeyLunch.push(2);
-                  // } else if (element.hasOwnProperty(3)) {
-                  //   checkKeyLunch.push(3);
-                  // } else if (element.hasOwnProperty(4)) {
-                  //   checkKeyLunch.push(4);
-                  // }
                   switch (i) {
                     case 0: {
                       if (element.hasOwnProperty(0)) {
@@ -201,17 +176,6 @@ function Hanbit() {
               </tr>
               <tr>
                 {temp[0].석식.map(function (element, i) {
-                  // if (element.hasOwnProperty(0)) {
-                  //   checkKeyDinner.push(0);
-                  // } else if (element.hasOwnProperty(1)) {
-                  //   checkKeyDinner.push(1);
-                  // } else if (element.hasOwnProperty(2)) {
-                  //   checkKeyDinner.push(2);
-                  // } else if (element.hasOwnProperty(3)) {
-                  //   checkKeyDinner.push(3);
-                  // } else if (element.hasOwnProperty(4)) {
-                  //   checkKeyDinner.push(4);
-                  // }
                   switch (i) {
                     case 0: {
                       if (element.hasOwnProperty(0)) {
@@ -307,17 +271,6 @@ function StarLight() {
               </tr>
               <tr>
                 {temp[0].점심.map(function (element, i) {
-                  // if (element.hasOwnProperty(0)) {
-                  //   checkKeyLunch.push(0);
-                  // } else if (element.hasOwnProperty(1)) {
-                  //   checkKeyLunch.push(1);
-                  // } else if (element.hasOwnProperty(2)) {
-                  //   checkKeyLunch.push(2);
-                  // } else if (element.hasOwnProperty(3)) {
-                  //   checkKeyLunch.push(3);
-                  // } else if (element.hasOwnProperty(4)) {
-                  //   checkKeyLunch.push(4);
-                  // }
                   switch (i) {
                     case 0: {
                       if (element.hasOwnProperty(0)) {
@@ -386,18 +339,10 @@ function Milkyway() {
   let checkKeyDinner = [];
   let checkKeyDinnerIterator = -1;
 
-  console.log(temp);
-  console.log(temp[0]);
-  // console.log(temp[0].아점);
-  // console.log(temp[0].아점[0]);
-  // console.log(temp[0].아점[0][2]);
-
   let isVacation;
   if (Object.keys(temp[0]).length < 2) {
     isVacation = [true];
   }
-
-  console.log(isVacation);
 
   return (
     <>
@@ -549,29 +494,6 @@ function Milkyway() {
   );
 }
 
-function CafeteriaMeal() {
-  return (
-    <td id="table-20-6-12-{0:월, 1:화, ...}">
-      <div class="menu" data-table="{0:월, 1:화, ...}">
-        <div class="card menu-body ">
-          <h6 class="card-header">메인요리</h6>
-          <div class="card-body">
-            {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함*/}
-            <li class="side">반찬1</li>
-            <li class="side">반찬2</li>
-            <li class="side">반찬3</li>
-            <li class="side">반찬4</li>
-            <li class="side">반찬5</li>
-            <li class="side">반찬6</li>
-            <hr />￦<span class="add commas">정가</span>
-            <br />￦<span class="add commas">할인가</span>(조합원)
-          </div>
-        </div>
-      </div>
-    </td>
-  );
-}
-
 function TestCafeteriaMeal(props) {
   let info = props.info;
   let checkKey;
@@ -588,18 +510,14 @@ function TestCafeteriaMeal(props) {
     checkKeyIterator = props.checkKeyDinnerIterator;
   }
 
-  // console.log(props.info);
-  // console.log(props.checkKeyBrunch);
-  // console.log(props.checkKeyBrunchIterator);
-
-  //console.log(info[checkKey[checkKeyIterator]]);
-
   return (
     <td id="table-20-6-12-{0:월, 1:화, ...}">
       <div class="menu" data-table="{0:월, 1:화, ...}">
         <div className="card menu-body ">
           <div className="card-body">
-            {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함*/}
+            {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함
+            한 줄로 되어 있어서 나중에 파싱해서 수정 예정
+            */}
             {info[checkKey[checkKeyIterator]]}
           </div>
         </div>

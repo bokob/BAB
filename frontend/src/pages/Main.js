@@ -1,6 +1,5 @@
 import Clock from "../components/Clock";
 import {
-  TodayMeal,
   YangsungjaeTodayMeal,
   YangjinjaeTodayMeal,
   HanbitTodayMeal,
@@ -10,8 +9,6 @@ import {
 } from "../components/TodayMeal";
 import { Row, Col, Container } from "react-bootstrap";
 import { CafeteriaTimeTable, DormitoryTimeTalbe } from "../components/TimeTable";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 function Main() {
   let place = ["본관", "양성재", "양진재", "한빛식당", "별빛식당", "은하수식당"];
