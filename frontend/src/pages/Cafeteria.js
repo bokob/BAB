@@ -10,6 +10,8 @@ function Hanbit() {
     return state.hanbitWeekMeal;
   });
 
+  let today = new Date().getDay();
+
   let checkKeyBrunch = [];
   let checkKeyBrunchIterator = -1;
   let checkKeyLunch = [];
@@ -36,11 +38,19 @@ function Hanbit() {
                 {
                   // 날자 및 요일
                   dateHeader.map(function (element, i) {
-                    return (
-                      <th class="weekday-title">
-                        {element}({day[i]})
-                      </th>
-                    );
+                    if (today === i + 1) {
+                      return (
+                        <th class="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
+                          {element}({day[i]})
+                        </th>
+                      );
+                    } else {
+                      return (
+                        <th class="weekday-title">
+                          {element}({day[i]})
+                        </th>
+                      );
+                    }
                   })
                 }
               </tr>
@@ -239,6 +249,7 @@ function StarLight() {
   let temp = useSelector((state) => {
     return state.starLightWeekMeal;
   });
+  let today = new Date().getDay();
 
   let checkKeyLunch = [];
   let checkKeyLunchIterator = -1;
@@ -254,11 +265,19 @@ function StarLight() {
                 {
                   // 날자 및 요일
                   dateHeader.map(function (element, i) {
-                    return (
-                      <th class="weekday-title">
-                        {element}({day[i]})
-                      </th>
-                    );
+                    if (today === i + 1) {
+                      return (
+                        <th class="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
+                          {element}({day[i]})
+                        </th>
+                      );
+                    } else {
+                      return (
+                        <th class="weekday-title">
+                          {element}({day[i]})
+                        </th>
+                      );
+                    }
                   })
                 }
               </tr>
@@ -334,6 +353,7 @@ function Milkyway() {
   let temp = useSelector((state) => {
     return state.milkywayWeekMeal;
   });
+  let today = new Date().getDay();
   let checkKeyLunch = [];
   let checkKeyLunchIterator = -1;
   let checkKeyDinner = [];
@@ -355,11 +375,19 @@ function Milkyway() {
                 {
                   // 날자 및 요일
                   dateHeader.map(function (element, i) {
-                    return (
-                      <th class="weekday-title">
-                        {element}({day[i]})
-                      </th>
-                    );
+                    if (today === i + 1) {
+                      return (
+                        <th class="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
+                          {element}({day[i]})
+                        </th>
+                      );
+                    } else {
+                      return (
+                        <th class="weekday-title">
+                          {element}({day[i]})
+                        </th>
+                      );
+                    }
                   })
                 }
               </tr>

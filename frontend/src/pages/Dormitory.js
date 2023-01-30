@@ -145,6 +145,8 @@ function YangJinjae() {
 function DormitoryDayMeal(props) {
   //console.log(props.info);
 
+  let today = new Date().getDay();
+
   let day;
   switch (props.idx) {
     case 0:
@@ -172,17 +174,32 @@ function DormitoryDayMeal(props) {
       day = "?";
       break;
   }
-  return (
-    <tr id="2023-01-02">
-      <td className="foodday">
-        {day} <br /> {props.info[0]}
-        <br />
-      </td>
-      {[1, 2, 3].map(function (element, i) {
-        return <DormitoryMeal info={props.info[element]} />;
-      })}
-    </tr>
-  );
+
+  if (props.idx === today) {
+    return (
+      <tr id={day} style={{ backgroundColor: "#F8ABA6" }}>
+        <td className="foodday">
+          {day} <br /> {props.info[0]}
+          <br />
+        </td>
+        {[1, 2, 3].map(function (element, i) {
+          return <DormitoryMeal info={props.info[element]} />;
+        })}
+      </tr>
+    );
+  } else {
+    return (
+      <tr id={day}>
+        <td className="foodday">
+          {day} <br /> {props.info[0]}
+          <br />
+        </td>
+        {[1, 2, 3].map(function (element, i) {
+          return <DormitoryMeal info={props.info[element]} />;
+        })}
+      </tr>
+    );
+  }
 }
 
 function DormitoryMeal(props) {
