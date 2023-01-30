@@ -1,10 +1,28 @@
 import Clock from "../components/Clock";
-import TodayMeal from "../components/TodayMeal";
+import {
+  TodayMeal,
+  YangsungjaeTodayMeal,
+  YangjinjaeTodayMeal,
+  HanbitTodayMeal,
+  StarLightTodayMeal,
+  MilkywayTodayMeal,
+  MainBuildingTodayMeal,
+} from "../components/TodayMeal";
 import { Row, Col, Container } from "react-bootstrap";
 import { CafeteriaTimeTable, DormitoryTimeTalbe } from "../components/TimeTable";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function Main() {
   let place = ["본관", "양성재", "양진재", "한빛식당", "별빛식당", "은하수식당"];
+
+  // let todayMainBuildingMeal = temp.mainbuildingWeekMeal[0][0][today];
+  // let todayYangSungjaeMeal = temp.yangsungjaeWeekMeal[0][0][today];
+  // let todayYangJinjaeMeal = temp.yangjinjaeWeekMeal[0][0][today];
+
+  // console.log(todayMainBuildingMeal);
+
+  //console.log(today);
 
   return (
     <div>
@@ -12,22 +30,22 @@ function Main() {
       <Container fluid>
         <Row>
           <Col>
-            <TodayMeal place={place[0]} />
+            <MainBuildingTodayMeal place={place[0]} />
           </Col>
           <Col>
-            <TodayMeal place={place[1]} />
+            <YangsungjaeTodayMeal place={place[1]} />
           </Col>
           <Col>
-            <TodayMeal place={place[2]} />
+            <YangjinjaeTodayMeal place={place[2]} />
           </Col>
           <Col>
-            <TodayMeal place={place[3]} />
+            <HanbitTodayMeal place={place[3]} />
           </Col>
           <Col>
-            <TodayMeal place={place[4]} />
+            <StarLightTodayMeal place={place[4]} />
           </Col>
           <Col>
-            <TodayMeal place={place[5]} />
+            <MilkywayTodayMeal place={place[5]} />
           </Col>
         </Row>
       </Container>

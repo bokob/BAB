@@ -35,7 +35,7 @@ def make_day_list_matches_date(date_list): # 요일 리스트 만들기
         temp = list(map(int,element.split('-')))
         split_date_list.append(temp)
     
-    days=['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'] 
+    days=['1', '2', '3', '4', '5', '6', '0'] 
     result=[]
     for element in split_date_list: # 요일 알아낸다.
         result.append(days[date(element[0],element[1],element[2]).weekday()])
