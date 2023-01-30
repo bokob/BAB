@@ -37,9 +37,9 @@ function Hanbit() {
         </Badge>
       </h1>
       <br />
-      <div class="row restaurant">
-        <div class="table-responsive mb-4" id="menu-table">
-          <table class="table">
+      <div className="row restaurant">
+        <div className="table-responsive mb-4" id="menu-table">
+          <table className="table">
             <thead>
               <tr>
                 {
@@ -270,9 +270,9 @@ function StarLight() {
         </Badge>
       </h1>
       <br />
-      <div class="row restaurant">
-        <div class="table-responsive mb-4" id="menu-table">
-          <table class="table">
+      <div className="row restaurant">
+        <div className="table-responsive mb-4" id="menu-table">
+          <table className="table">
             <thead>
               <tr>
                 {
@@ -280,13 +280,13 @@ function StarLight() {
                   dateHeader.map(function (element, i) {
                     if (today === i + 1) {
                       return (
-                        <th class="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
+                        <th className="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
                           {element}({day[i]})
                         </th>
                       );
                     } else {
                       return (
-                        <th class="weekday-title">
+                        <th className="weekday-title">
                           {element}({day[i]})
                         </th>
                       );
@@ -386,9 +386,9 @@ function Milkyway() {
         </Badge>
       </h1>
       <br />
-      <div class="row restaurant">
-        <div class="table-responsive mb-4" id="menu-table">
-          <table class="table">
+      <div className="row restaurant">
+        <div className="table-responsive mb-4" id="menu-table">
+          <table className="table">
             <thead>
               <tr>
                 {
@@ -396,13 +396,13 @@ function Milkyway() {
                   dateHeader.map(function (element, i) {
                     if (today === i + 1) {
                       return (
-                        <th class="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
+                        <th className="weekday-title" style={{ backgroundColor: "#F8ABA6" }}>
                           {element}({day[i]})
                         </th>
                       );
                     } else {
                       return (
-                        <th class="weekday-title">
+                        <th className="weekday-title">
                           {element}({day[i]})
                         </th>
                       );
@@ -413,7 +413,7 @@ function Milkyway() {
             </thead>
             <tbody>
               <tr>
-                <th colSpan="5" class="row-time">
+                <th colSpan="5" className="row-time">
                   점심식사 (오전 11:00 ~ 오후 2:00)
                 </th>
               </tr>
@@ -472,7 +472,7 @@ function Milkyway() {
               </tr>
 
               <tr>
-                <th colSpan="5" class="row-time">
+                <th colSpan="5" className="row-time">
                   석식코너 (오후 4:30 ~ 오후 6:30)
                 </th>
               </tr>
@@ -559,7 +559,7 @@ function TestCafeteriaMeal(props) {
 
   return (
     <td id="table-20-6-12-{0:월, 1:화, ...}">
-      <div class="menu" data-table="{0:월, 1:화, ...}">
+      <div className="menu" data-table="{0:월, 1:화, ...}">
         <div className="card menu-body ">
           <div className="card-body">
             {/*반찬의 개수는 유동적이라 map 함수로 만들어야 함

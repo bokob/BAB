@@ -58,7 +58,7 @@ async def yangsungjae_week_meal_page():
 
 @app.get('/양진재')
 async def yangjinjae_week_meal_page():
-    result = [yangjinjae_this_week.get(), yangjinjae_this_week.get()]
+    result = [yangjinjae_this_week.get(), yangjinjae_next_week.get()]
     return result
 
 @app.get('/한빛식당')

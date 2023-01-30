@@ -15,8 +15,9 @@ export default function Header() {
               }}
               style={{ color: "white", textDecoration: "none" }}
             >
-              <img src={process.env.PUBLIC_URL + "BAB_logo.png"} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
-              <span style={{ fontSize: "20px", textAlign: "center" }}> BAB</span>
+              <img src={process.env.PUBLIC_URL + "BAB_logo.png"} alt="Logo" width="50" height="50" />
+              &nbsp;
+              <span style={{ fontSize: "30px", textAlign: "center" }}> BAB</span>
             </Nav.Link>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
 
@@ -25,7 +26,7 @@ export default function Header() {
                 onClick={() => {
                   window.open("https://dorm.chungbuk.ac.kr/home/main.php");
                 }}
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "white", fontSize: "20px", textDecoration: "none" }}
               >
                 기숙사
               </Nav.Link>
@@ -33,11 +34,11 @@ export default function Header() {
                 onClick={() => {
                   window.open("https://www.cbnucoop.com/");
                 }}
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "white", fontSize: "20px", textDecoration: "none" }}
               >
                 생활협동조합
               </Nav.Link>
-              <NavDropdown title={"주차별 식단표"} id="nav-dropdown">
+              <NavDropdown title={"주차별 식단표"} style={{ fontSize: "20px" }} id="nav-dropdown">
                 <NavDropdown.Item
                   onClick={() => {
                     navigate("/본관");
