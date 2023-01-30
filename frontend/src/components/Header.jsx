@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div>
       {["sm"].map((expand) => (
-        <Navbar key={expand} bg="danger" expand={expand} className="mb-3">
+        <Navbar key={expand} style={{ backgroundColor: "#b82d46" }} expand={expand} className="mb-3">
           <Container fluid>
             <Nav.Link
               onClick={() => {

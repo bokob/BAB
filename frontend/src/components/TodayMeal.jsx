@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import "../css/TodayMeal.css";
+import "./../css/TodayMeal.css";
 
 function TodayMeal(props) {
   let place = props.place;
@@ -71,7 +71,7 @@ function MainBuildingTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>
@@ -108,7 +108,7 @@ function YangsungjaeTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>
@@ -144,7 +144,7 @@ function YangjinjaeTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>
@@ -209,7 +209,7 @@ function HanbitTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>
@@ -253,7 +253,7 @@ function StarLightTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>
@@ -298,7 +298,7 @@ function MilkywayTodayMeal(props) {
     return (
       <>
         <Card>
-          <Card.Header className="Card-Header">
+          <Card.Header id="Card-Header">
             <Link to={address} className="Card-Header-Place">
               {place}
             </Link>

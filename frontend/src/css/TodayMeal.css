@@ -1,10 +1,9 @@
 .Card-Header-Place {
   font-size: xx-large;
-
-  color: black;
+  color: white;
   text-decoration-line: none;
 }
 
-.Card-Header {
+#Card-Header {
   background-color: #b82d46;
 }
